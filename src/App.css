@@ -6,10 +6,32 @@
 
 #root {
     padding: 1rem;
+    background-color: rgb(255, 246, 228);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 header > h1 {
     font-size: 3em;
+    position: relative;
+}
+
+header > h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(163, 106, 0);
+}
+
+.score-wrapper {
+    font-size: 2em;
 }
 
 main {
@@ -22,6 +44,8 @@ main {
     cursor: pointer;
     transition: transform 0.5s;
     box-shadow: 0 8px 12px gray;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .card > p {
