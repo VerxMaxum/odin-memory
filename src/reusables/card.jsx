@@ -1,8 +1,7 @@
-export default function Card({ imgSrc, name, alt }) {
-    console.log(imgSrc);
+export default function Card({ imgSrc, id, name, alt, onClick }) {
     return (
         <>
-            <div className="card">
+            <div id={id} className="card" onClick={onClick}>
                 <div className="img-container">
                     <img src={imgSrc} alt={alt}/>
                 </div>
